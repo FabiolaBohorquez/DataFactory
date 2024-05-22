@@ -1,0 +1,9 @@
+{
+	"name": "fsernaquefactoriadedatos",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "193a1ecd-e2bd-4949-8ed0-2cbfaaadb9a2",
+		"tenantId": "f66f4283-f21d-485a-849a-8e843ed448e4"
+	}
+}
