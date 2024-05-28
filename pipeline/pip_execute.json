@@ -1,6 +1,58 @@
 {
 	"name": "pip_execute",
 	"properties": {
+		"activities": [
+			{
+				"name": "Execute CapaBronce",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute CapaPlata",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute CapaBronce",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute CapaOro",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute CapaPlata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
 		"annotations": []
 	}
 }
