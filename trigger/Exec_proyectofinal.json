@@ -8,6 +8,12 @@
 				"pipelineReference": {
 					"referenceName": "pip_execute",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Cod_Producto": "Cod_Producto",
+					"NombreProducto": "NombreProducto",
+					"NombreSubCategoria": "NombreSubCategoria",
+					"NombreCategoria": "NombreCategoria"
 				}
 			}
 		],
