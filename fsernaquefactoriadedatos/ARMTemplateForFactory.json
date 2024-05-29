@@ -264,7 +264,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Execute CapaBronce",
+						"name": "Exec-CapaBronce",
 						"type": "ExecutePipeline",
 						"dependsOn": [],
 						"policy": {
@@ -281,11 +281,11 @@
 						}
 					},
 					{
-						"name": "Execute CapaPlata",
+						"name": "Exec-CapaPlata",
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
-								"activity": "Execute CapaBronce",
+								"activity": "Exec-CapaBronce",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -305,11 +305,11 @@
 						}
 					},
 					{
-						"name": "Execute CapaOro",
+						"name": "Exec-CapaOro",
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
-								"activity": "Execute CapaPlata",
+								"activity": "Exec-CapaPlata",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -331,6 +331,20 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"Cod_Producto": {
+						"type": "string"
+					},
+					"NombreProducto": {
+						"type": "string"
+					},
+					"NombreSubCategoria": {
+						"type": "string"
+					},
+					"NombreCategoria": {
+						"type": "string"
+					}
 				},
 				"annotations": []
 			},
@@ -553,8 +567,7 @@
 						"frequency": "Day",
 						"interval": 1,
 						"startTime": "2024-05-29T12:10:00",
-						"timeZone": "SA Pacific Standard Time",
-						"schedule": {}
+						"timeZone": "SA Pacific Standard Time"
 					}
 				}
 			},
