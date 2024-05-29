@@ -65,6 +65,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"Cod_Producto": {
+				"type": "string"
+			},
+			"NombreProducto": {
+				"type": "string"
+			},
+			"NombreSubCategoria": {
+				"type": "string"
+			},
+			"NombreCategoria": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
