@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Execute CapaBronce",
+				"name": "Exec-CapaBronce",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"policy": {
@@ -19,11 +19,11 @@
 				}
 			},
 			{
-				"name": "Execute CapaPlata",
+				"name": "Exec-CapaPlata",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute CapaBronce",
+						"activity": "Exec-CapaBronce",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -42,11 +42,11 @@
 				}
 			},
 			{
-				"name": "Execute CapaOro",
+				"name": "Exec-CapaOro",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute CapaPlata",
+						"activity": "Exec-CapaPlata",
 						"dependencyConditions": [
 							"Succeeded"
 						]
